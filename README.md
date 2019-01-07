@@ -26,3 +26,11 @@ The number of transactions originating from that particular country is expressed
 
 3. Message Frontend  
 The frontend comprises of a React.js app that colors countries on a global map in real time. Countries that have a high percent of transactions originating from them are more green, while countries having lesser transactions originating from them are more red. The percentage of transactions originating from each country is also displayed in the bottom-left hand corner. Since communication happens over a websocket, data is rendered on the map in real time.  The system also suports multiple clients connecting to the server at any time. 
+
+## Testing
+
+1. Basic Junit Tests - basic test to check http connection to the server, check if undefined paths are handled, sending valid and invalid JSON data to the server and check if correct error responses are received. 
+
+2. Stress tesing (backend) - The buffer size was decreased from 500 to 250. Multiple post requests (each of size ~100) were sent to the server until the buffer was full. The rejected request was retried continuously. The server did not crash. Once the buffer could accomodate the request, the failed request went through. The processing log was analysed to ensure that the transactions were executed in order. 
+
+3. Stress testing (frontend) - A large batch of messages were sent to the frontend. This test lasted ~15 seconds. When that worked smoothly, the test was repeated on a loop to last a couple minutes. The front end seemed to be handling requests very well.  
