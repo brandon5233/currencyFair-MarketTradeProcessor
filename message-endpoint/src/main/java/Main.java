@@ -28,7 +28,7 @@ import static spark.Spark.*;
 
 public class Main {
 
-    private static final int bufferSize = 300;
+    private static final int bufferSize = 150;
     static CopyOnWriteArrayList<Session> sessions = new CopyOnWriteArrayList<>();
 
     public static void main(String[] args) {
@@ -57,7 +57,6 @@ public class Main {
             } catch (JsonSyntaxException ex) {
                 response.status(415);
                 setResponse(response, "JSONSyntaxException: Please provide an array of JSON object(s)");
-                System.out.println(request.body());
             } catch (Exception e) {
                 e.printStackTrace();
                 response.status(500);

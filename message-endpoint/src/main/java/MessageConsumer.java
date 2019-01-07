@@ -12,7 +12,7 @@ class MessageConsumer extends Thread {
             if (transaction != null) {
                 try {
                     processorBuffer.put(transaction);
-                    System.out.println("put " + transaction.userId + " into buffer");
+                    //System.out.println("put " + transaction.userId + " into buffer");
                 } catch (InterruptedException ie) {
                     System.out.println("Writing into processor_buffer interrupted");
                 }

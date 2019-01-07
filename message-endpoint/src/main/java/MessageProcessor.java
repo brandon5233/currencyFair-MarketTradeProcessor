@@ -35,9 +35,7 @@ public class MessageProcessor extends Thread {
         for (; ; ) {
             try {
                 Transaction transaction = processorBuffer.take();
-                System.out.println("*****************Threaded Transaction : " + transaction.toString());
-                //Thread.sleep((long)Math.random()*10000);
-                Thread.sleep(100);
+                //System.out.println("*****************Threaded Transaction : " + transaction.toString());
                 processTransaction(transaction);
 
             } catch (InterruptedException ie) {
