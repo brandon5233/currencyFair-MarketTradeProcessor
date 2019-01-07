@@ -37,10 +37,10 @@
   margin:0;
   padding:0;
   width: 100vw;
-  height: 10vh;
-  background: black;
+  height: 9vh;
+  background: rgba(0, 0, 0, 0.890);
 }
-.navbar h2{
+.navbar h2, .navbar h3{
   margin:0;
   color: white; 
 }
@@ -50,7 +50,7 @@
 }
 
 .Map{
-  height: 90vh;
+  height: 91vh;
   width: 100vw;
   position: absolute;
 }
@@ -58,7 +58,8 @@
 .infoContainer{
   width: 18vw;
   height:38vh;
-  background-color: #7850d4e1;
+  background-color: #262527e1;
+  color: white;
   position: absolute;
   margin-left: 1vw;
   margin-top: 50vh;
@@ -67,10 +68,11 @@
 }
 
 .percentBoxHeader{
-  background-color:rgb(13, 28, 165);
+  background-color:rgba(0, 0, 0, 0.151);
+  color: white;
 }
 
-.percentBoxHeader h5{
+.percentBoxHeader h4{
   padding: 5%;
   margin:0;
 }

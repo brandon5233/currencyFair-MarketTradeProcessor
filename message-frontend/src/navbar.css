@@ -1,0 +1,17 @@
+#logo{
+    float: left;
+    display: block;
+    height: 100%;
+    padding:16px;
+}
+
+#logo:hover, #description:hover{
+    background-color:rgba(77, 73, 73, 0.747); 
+}
+
+#description{
+    float: left;
+    display: block;
+    height: 100%;
+    padding:20px;
+}
