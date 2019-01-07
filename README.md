@@ -6,6 +6,8 @@ The system consumes JSON messages, process them, and finally displays an output 
 ## System Architecture
 
 ![alt text](https://github.com/brandon5233/currencyFair-MarketTradeProcessor/blob/master/System%20Diagram.jpg "System Architecture Diagram")
+ 
+ <hr>
 
 1. Message Consumer  
   The consumer is available at **0.0.0.0/api_test**. It accepts a JSONArray as input. Each JSONObject is of the format:     
@@ -15,8 +17,6 @@ The system consumes JSON messages, process them, and finally displays an output 
   "amountSell": 1000, "amountBuy": 747.10, "rate": 0.7471,  
   "timePlaced" : "24-JAN-18 10:27:44", "originatingCountry" : "FR"}
   ```   
-  
-  <hr>
   Incoming JSONArrays are converted into an array of java objects using Gson.  
   Each transaction is loaded onto a buffer.  
   
