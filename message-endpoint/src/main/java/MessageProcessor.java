@@ -19,13 +19,12 @@ import java.util.concurrent.ArrayBlockingQueue;
 
 public class MessageProcessor extends Thread {
     ArrayBlockingQueue<Transaction> processorBuffer;
-    DeliveryPacket deliveryPacket;
     HashMap<String, Integer> countryFreqMap;
     int transactionCount;
 
-    MessageProcessor(ArrayBlockingQueue processorBuffer, DeliveryPacket deliveryPacket) {
+    MessageProcessor(ArrayBlockingQueue processorBuffer) {
         this.processorBuffer = processorBuffer;
-        this.deliveryPacket = deliveryPacket;
+
         countryFreqMap = new HashMap<>();
         transactionCount = 0;
         System.out.println("Processor Started");

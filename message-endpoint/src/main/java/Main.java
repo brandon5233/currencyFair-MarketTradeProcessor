@@ -20,6 +20,7 @@ import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
 import org.eclipse.jetty.websocket.api.Session;
 import spark.Response;
+
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -31,10 +32,9 @@ public class Main {
     static CopyOnWriteArrayList<Session> sessions = new CopyOnWriteArrayList<>();
 
     public static void main(String[] args) {
-        DeliveryPacket deliveryPacket = new DeliveryPacket();
         ArrayBlockingQueue<Transaction> processorBuffer = new ArrayBlockingQueue<>(bufferSize);
         MessageConsumer messageConsumer = new MessageConsumer();
-        new MessageProcessor(processorBuffer, deliveryPacket).start();
+        new MessageProcessor(processorBuffer).start();
 
         webSocket("/infostream", WebsocketHandler.class);
 
