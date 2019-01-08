@@ -11,7 +11,7 @@ class DisplayPercents extends Component{
             
             <div className="displaypercents">
                <div className="percentBoxHeader">
-                    <h4>%Transactions Origin Country</h4>
+                    <h4>%Transactions Originating per  Country</h4>
                </div>
                 {
                     Object.keys(dataArray)

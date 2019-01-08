@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  width: 100vw;
+  height:100vh;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -17,6 +20,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .App-link {
@@ -39,11 +43,38 @@
   width: 100vw;
   height: 9vh;
   background: rgba(0, 0, 0, 0.890);
+  overflow: hidden;
 }
 .navbar h2, .navbar h3{
   margin:0;
   color: white; 
 }
+
+
+
+.hideHelp{
+  width: 30vw;
+  position: absolute;
+  margin-top:0.5%;
+  background-color: rgba(255, 255, 255, 0.74);;
+  margin-left: 65vw; 
+  padding: 3%;
+  border-radius: 15px;
+  opacity: 0;
+}
+
+.showHelp{
+  width: 30vw;
+  position: absolute;
+  margin-top:0.5%;
+  background-color: #262527e1;
+  margin-left: 65vw; 
+  padding: 3%;
+  border-radius: 15px;
+  color:white;
+  opacity: 1;
+}
+
 
 .mapContainer{
   position: relative;
@@ -53,6 +84,7 @@
   height: 91vh;
   width: 100vw;
   position: absolute;
+  
 }
 
 .infoContainer{
@@ -90,16 +122,13 @@
 height:8vh;
 }
 
-.connectionStatus{
- 
-}
-
 .connectionStatusContainer{
   position: absolute;
-  margin-left: 80vw;
+  margin-left: 79vw;
   margin-top: 78vh;
   background-color: rgba(255, 255, 255, 0.336);
   width: 20vw;
+  border-radius: 15px; 
 }
 
 .serverConnected{
@@ -112,12 +141,50 @@ height:8vh;
  
 }
 
-
-
 .refreshNotice{
   margin-top: 5px;
 }
 
+.aboutButtonContainer{
+  position: absolute;
+  color: white;
+  /*background-color: rgba(255, 255, 255, 0.836);*/
+  width: 100vw;
+  height: 100vh;
+  color:black;
+}
+
+.showAboutContent{
+  background-color:rgba(255, 255, 255, 0.89);
+  margin-top: 15%;
+  padding: 2%;
+  display: block;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+.hideAboutContent{
+  background-color:rgba(255, 255, 255, 0.836);
+  margin-top: 15%;
+  padding: 2%;
+  display: block;
+  opacity: 0;
+  border-radius: 5px;
+}
+
+.aboutButton{
+  width: 7vw;
+  margin-left: 64vw;
+  background-color: rgba(255, 255, 255, 0.336);
+  padding: 1.5%;
+  display: block;
+  border-radius: 5px;
+  margin-top: 2vh; 
+}
+
+.aboutButton:hover, .aboutContent{
+  opacity: 1;
+}
 
  /*
 .navbar li a{

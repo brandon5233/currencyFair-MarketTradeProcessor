@@ -10,7 +10,7 @@ function ConnectionStatus(props){
             return(
                 <div className="serverDisconnected">
                     <h5 >Disconnected!</h5>
-                    <h5 className="refreshNotice">Refresh page when server is running to reconnect</h5>
+                    <h5 className="refreshNotice">Refresh the page to reconnect</h5>
                 </div>
             );
         }

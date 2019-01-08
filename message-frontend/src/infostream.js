@@ -13,7 +13,9 @@ class WebSocketWorker extends Component{
    }
 
    establlishSocketConnection(){
-        const socket = new WebSocket("ws://0.0.0.0:4567/infostream");
+      //const socket = new WebSocket("ws://0.0.0.0:4567/infostream");
+      const socket = new WebSocket("ws://heroku-spark-backend.herokuapp.com/infostream");
+
         socket.onopen = () => {
             this.props.changeConnectionStatus(true);
         }
