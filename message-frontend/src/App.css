@@ -50,8 +50,6 @@
   color: white; 
 }
 
-
-
 .hideHelp{
   width: 30vw;
   position: absolute;
@@ -74,7 +72,6 @@
   color:white;
   opacity: 1;
 }
-
 
 .mapContainer{
   position: relative;
@@ -186,22 +183,6 @@ height:8vh;
   opacity: 1;
 }
 
- /*
-.navbar li a{
-  padding: 15px 0px;
-  text-decoration: none;
-  display: block;
-  color: white;
-  width: 30%;
-  height: 100%;
-}
-
-
-.navbar li a:hover{
-  background: #222;
-}
-
-*/
 
 
 
